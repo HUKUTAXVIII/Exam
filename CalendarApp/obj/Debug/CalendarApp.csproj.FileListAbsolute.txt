@@ -1,0 +1,10 @@
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\CalendarApp\bin\Debug\CalendarApp.exe.config
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\CalendarApp\bin\Debug\CalendarApp.exe
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\CalendarApp\bin\Debug\CalendarApp.pdb
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\CalendarApp\obj\Debug\CalendarApp.csprojAssemblyReference.cache
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\CalendarApp\obj\Debug\CalendarApp.Form1.resources
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\CalendarApp\obj\Debug\CalendarApp.Properties.Resources.resources
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\CalendarApp\obj\Debug\CalendarApp.csproj.GenerateResource.cache
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\CalendarApp\obj\Debug\CalendarApp.csproj.CoreCompileInputs.cache
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\CalendarApp\obj\Debug\CalendarApp.exe
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\CalendarApp\obj\Debug\CalendarApp.pdb

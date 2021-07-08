@@ -13,13 +13,14 @@ using NoteLib;
 
 namespace CalendarApp
 {
+    
     public partial class CalendarAppForm : Form
     {
 
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarAppForm));
         private string language = string.Empty;
         private CultureInfo ci;
-
+        private bool isDeleting;
 
         public NoteManager noteManager;
 
@@ -54,6 +55,7 @@ namespace CalendarApp
             InitializeComponent();
             UpdateGUINotes();
             ChangeLanguage();
+            this.DeleteButton.BackColor = Color.White;
         }
         private void ChangeLanguage()
         {
@@ -111,7 +113,15 @@ namespace CalendarApp
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-
+            this.isDeleting = !this.isDeleting;
+            if (isDeleting)
+            {
+                this.DeleteButton.BackColor = Color.Red;
+            }
+            else { 
+                this.DeleteButton.BackColor = Color.White;
+            
+            }
         }
 
         private void SettingsButton_Click(object sender, EventArgs e)

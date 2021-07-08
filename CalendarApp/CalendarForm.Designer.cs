@@ -93,6 +93,7 @@
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.NotePanel);
             this.Controls.Add(this.Calendar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CalendarAppForm";
             this.ResumeLayout(false);
             this.PerformLayout();

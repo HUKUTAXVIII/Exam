@@ -1,0 +1,6 @@
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\NoteLib\bin\Debug\NoteLib.dll
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\NoteLib\bin\Debug\NoteLib.pdb
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\NoteLib\obj\Debug\NoteLib.csprojAssemblyReference.cache
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\NoteLib\obj\Debug\NoteLib.csproj.CoreCompileInputs.cache
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\NoteLib\obj\Debug\NoteLib.dll
+C:\Users\student\source\repos\HUKUTAXVIII\Exam\NoteLib\obj\Debug\NoteLib.pdb

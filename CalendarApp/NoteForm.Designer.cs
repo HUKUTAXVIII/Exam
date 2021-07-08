@@ -2,6 +2,7 @@
 {
     partial class NoteForm
     {
+        
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -58,6 +59,8 @@
             this.Controls.Add(this.NameBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "NoteForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NoteForm_FormClosing);
+            this.Load += new System.EventHandler(this.NoteForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

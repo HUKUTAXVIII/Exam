@@ -1,0 +1,5 @@
+C:\Users\DELL_PRECISION\Source\Repos\Exam1\NoteLib\bin\Debug\NoteLib.dll
+C:\Users\DELL_PRECISION\Source\Repos\Exam1\NoteLib\bin\Debug\NoteLib.pdb
+C:\Users\DELL_PRECISION\Source\Repos\Exam1\NoteLib\obj\Debug\NoteLib.csproj.CoreCompileInputs.cache
+C:\Users\DELL_PRECISION\Source\Repos\Exam1\NoteLib\obj\Debug\NoteLib.dll
+C:\Users\DELL_PRECISION\Source\Repos\Exam1\NoteLib\obj\Debug\NoteLib.pdb

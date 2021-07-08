@@ -1,7 +1,13 @@
-﻿namespace CalendarApp
+﻿using NoteLib;
+
+namespace CalendarApp
 {
     partial class CalendarAppForm
     {
+        
+        
+
+
         /// <summary>
         /// Обязательная переменная конструктора.
         /// </summary>

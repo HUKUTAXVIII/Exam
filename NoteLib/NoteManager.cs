@@ -25,7 +25,7 @@ namespace NoteLib
                     Directory.GetFiles(date).ToList().ForEach((file) =>
                     {
                         Notes.Add(new Note());
-                        Notes.Last().Name = new FileInfo(file).Name.Substring(0, new FileInfo(file).Name.Length - 4);
+                        Notes.Last().Name = new FileInfo(file).Name;
                         Notes.Last().Content = File.ReadAllText(file);
                         Notes.Last().CalendarPosition = Convert.ToDateTime(new DirectoryInfo(date).Name);
                     });

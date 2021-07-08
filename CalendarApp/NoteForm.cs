@@ -38,6 +38,14 @@ namespace CalendarApp
             this.NameBox.ReadOnly = true;
             this.ContentBox.ReadOnly = true;
         }
+        public NoteForm(DateTime time,bool edit)
+        {
+
+            isEditing = edit;
+
+            InitializeComponent();
+            this.TimeBox.Text = time.ToShortDateString();
+        }
 
         private void NoteForm_Load(object sender, EventArgs e)
         {
@@ -51,7 +59,7 @@ namespace CalendarApp
                 if (!string.IsNullOrEmpty(this.NameBox.Text))
                 {
                     NoteManager note = new NoteManager();
-                    note.Notes.Add(new Note(this.NameBox.Text,this.ContentBox.Text,DateTime.Now));
+                    note.Notes.Add(new Note(this.NameBox.Text,this.ContentBox.Text,Convert.ToDateTime(this.TimeBox.Text)));
                     note.SaveNotes(File.ReadAllText("FilePath.txt"));                    
                     //this.Close();
                 }

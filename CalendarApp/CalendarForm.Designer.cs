@@ -48,6 +48,7 @@ namespace CalendarApp
             // 
             resources.ApplyResources(this.Calendar, "Calendar");
             this.Calendar.Name = "Calendar";
+            this.Calendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.Calendar_DateSelected);
             // 
             // NotePanel
             // 

@@ -26,6 +26,18 @@ namespace CalendarApp
             isEditing = edit;
             InitializeComponent();
         }
+        public NoteForm(Note note)
+        {
+
+            isEditing = false;
+
+            InitializeComponent();
+            this.NameBox.Text = note.Name;
+            this.ContentBox.Text = note.Content;
+            this.TimeBox.Text = note.CalendarPosition.ToShortDateString();
+            this.NameBox.ReadOnly = true;
+            this.ContentBox.ReadOnly = true;
+        }
 
         private void NoteForm_Load(object sender, EventArgs e)
         {

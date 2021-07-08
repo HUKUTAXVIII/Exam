@@ -59,24 +59,28 @@
             resources.ApplyResources(this.SearchButton, "SearchButton");
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.UseVisualStyleBackColor = true;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // AddButton
             // 
             resources.ApplyResources(this.AddButton, "AddButton");
             this.AddButton.Name = "AddButton";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // DeleteButton
             // 
             resources.ApplyResources(this.DeleteButton, "DeleteButton");
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // SettingsButton
             // 
             resources.ApplyResources(this.SettingsButton, "SettingsButton");
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.UseVisualStyleBackColor = true;
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
             // CalendarAppForm
             // 

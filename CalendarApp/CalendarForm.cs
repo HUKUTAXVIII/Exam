@@ -27,16 +27,25 @@ namespace CalendarApp
         {
 
             if (!File.Exists("FilePath.txt")) {
-                File.Create("FilePath.txt");
+                File.Create("FilePath.txt").Close();
+                File.WriteAllText("FilePath.txt", "Note/");
             }
             if (!Directory.Exists("Note")) {
                 Directory.CreateDirectory("Note");
             }
+            
+
             if (File.Exists("Color.txt")) {
                 var color = File.ReadAllText("Color.txt").Split(' ').ToArray();
                 this.BackColor = Color.FromArgb(255,int.Parse(color[0]),int.Parse(color[1]),int.Parse(color[2]));
             }
-            if (File.Exists("language.txt")) {
+            if (File.Exists("language.txt"))
+            {
+                ci = new CultureInfo(File.ReadAllText("language.txt"));
+            }
+            else {
+                File.Create("language.txt").Close();
+                File.WriteAllText("language.txt","ru");
                 ci = new CultureInfo(File.ReadAllText("language.txt"));
             }
 
@@ -92,6 +101,9 @@ namespace CalendarApp
             using (NoteForm note = new NoteForm(this.Calendar.SelectionEnd,true)) {
                 note.ShowDialog();
             }
+                noteManager.Notes.Clear();
+            this.NotePanel.Controls.Clear();
+                noteManager.LoadNotes(File.ReadAllText("FilePath.txt"));
                 this.UpdateGUINotes();
                 ci = new CultureInfo(File.ReadAllText("language.txt"));
                 ChangeLanguage();
@@ -111,7 +123,7 @@ namespace CalendarApp
                     var color = File.ReadAllText("Color.txt").Split(' ').ToArray();
                     this.BackColor = Color.FromArgb(255, int.Parse(color[0]), int.Parse(color[1]), int.Parse(color[2]));
                 }
-
+                ci = new CultureInfo(File.ReadAllText("language.txt"));
                 ChangeLanguage();
 
             }
@@ -119,7 +131,27 @@ namespace CalendarApp
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
+            this.NotePanel.Controls.Clear();
+            noteManager.Notes.Where(item => item.Name.Contains(this.SearchBox.Text)).ToList().ForEach((item)=> {
 
+                Button button = new Button();
+
+                button.Size = new Size(this.NotePanel.Size.Width - 2, 50);
+                button.Name = item.Name;
+                if (this.NotePanel.Controls.Count != 0)
+                {
+                    button.Location = new Point(this.NotePanel.Controls.OfType<Button>().ToList().Last().Location.X, this.NotePanel.Controls.OfType<Button>().ToList().Last().Location.Y + 50);
+
+                }
+
+                button.FlatStyle = FlatStyle.Flat;
+                button.Text = $"{item.Name}\n\n{item.CalendarPosition.ToShortDateString()}";
+                button.Click += Button_Click;
+
+                this.NotePanel.Controls.Add(button);
+
+            });
+                
         }
 
         private void Calendar_DateSelected(object sender, DateRangeEventArgs e)

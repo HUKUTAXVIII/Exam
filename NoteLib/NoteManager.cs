@@ -40,21 +40,26 @@ namespace NoteLib
         {
             bool isCorrect = true;
 
-            if (!Directory.Exists(Path))
+            if (this.Notes.Count != 0)
             {
-                Directory.CreateDirectory(Path);
-            }
-            if (!Directory.Exists(Path + "Notes"))
-            {
-                Directory.CreateDirectory(Path + "Notes");
-            }
-            this.Notes.ForEach((note) =>
-            {
-                Directory.CreateDirectory(note.CalendarPosition.ToShortDateString());
-                File.Create(Path + "/Notes/" + note.CalendarPosition.ToShortDateString() + "/" + note.Name).Close();
-                File.WriteAllText(Path + "/Notes/" + note.CalendarPosition.ToShortDateString() + "/" + note.Name, note.Content);
-            });
 
+                if (!Directory.Exists(Path))
+                {
+                    Directory.CreateDirectory(Path);
+                }
+                    Directory.CreateDirectory(Path + "Notes");
+                
+                
+                this.Notes.ForEach((note) =>
+                {
+                    Directory.CreateDirectory(Path + "/Notes/"+note.CalendarPosition.ToShortDateString());
+                    File.Create(Path + "/Notes/" + note.CalendarPosition.ToShortDateString() + "/" + note.Name).Close();
+                    File.WriteAllText(Path + "/Notes/" + note.CalendarPosition.ToShortDateString() + "/" + note.Name, note.Content);
+                });
+            }
+            else {
+                isCorrect = false;
+            }
             return isCorrect;
         
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CalendarApp
 {
-    public partial class Form1 : Form
+    public partial class CalendarAppForm : Form
     {
-        public Form1()
+        public CalendarAppForm()
         {
             InitializeComponent();
         }

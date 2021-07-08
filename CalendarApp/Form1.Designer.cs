@@ -1,6 +1,6 @@
 ﻿namespace CalendarApp
 {
-    partial class Form1
+    partial class CalendarAppForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarAppForm));
             this.Calendar = new System.Windows.Forms.MonthCalendar();
             this.NotePanel = new System.Windows.Forms.Panel();
             this.SearchBox = new System.Windows.Forms.TextBox();
@@ -39,66 +40,48 @@
             // 
             // Calendar
             // 
-            this.Calendar.Location = new System.Drawing.Point(82, 55);
+            resources.ApplyResources(this.Calendar, "Calendar");
             this.Calendar.Name = "Calendar";
-            this.Calendar.TabIndex = 0;
             // 
             // NotePanel
             // 
+            resources.ApplyResources(this.NotePanel, "NotePanel");
             this.NotePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NotePanel.Location = new System.Drawing.Point(350, 22);
             this.NotePanel.Name = "NotePanel";
-            this.NotePanel.Size = new System.Drawing.Size(200, 270);
-            this.NotePanel.TabIndex = 1;
             // 
             // SearchBox
             // 
-            this.SearchBox.Location = new System.Drawing.Point(12, 305);
+            resources.ApplyResources(this.SearchBox, "SearchBox");
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(252, 20);
-            this.SearchBox.TabIndex = 2;
             // 
             // SearchButton
             // 
-            this.SearchButton.Location = new System.Drawing.Point(270, 305);
+            resources.ApplyResources(this.SearchButton, "SearchButton");
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(74, 23);
-            this.SearchButton.TabIndex = 3;
-            this.SearchButton.Text = "🔍";
             this.SearchButton.UseVisualStyleBackColor = true;
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(350, 305);
+            resources.ApplyResources(this.AddButton, "AddButton");
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(74, 23);
-            this.AddButton.TabIndex = 4;
-            this.AddButton.Text = "+";
             this.AddButton.UseVisualStyleBackColor = true;
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(430, 305);
+            resources.ApplyResources(this.DeleteButton, "DeleteButton");
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(74, 23);
-            this.DeleteButton.TabIndex = 5;
-            this.DeleteButton.Text = "-";
             this.DeleteButton.UseVisualStyleBackColor = true;
             // 
             // SettingsButton
             // 
-            this.SettingsButton.Location = new System.Drawing.Point(528, 305);
+            resources.ApplyResources(this.SettingsButton, "SettingsButton");
             this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(22, 23);
-            this.SettingsButton.TabIndex = 6;
-            this.SettingsButton.Text = "⚙";
             this.SettingsButton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // CalendarAppForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 337);
             this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.AddButton);
@@ -106,8 +89,7 @@
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.NotePanel);
             this.Controls.Add(this.Calendar);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "CalendarAppForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

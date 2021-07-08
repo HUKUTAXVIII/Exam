@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarApp", "CalendarApp.csproj", "{A1DA6E32-7C2C-4296-8177-298EAD4342AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteLib", "..\NoteLib\NoteLib.csproj", "{F542B467-C1A5-421B-BA9F-38B5421C23FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicTest", "..\LogicTest\LogicTest.csproj", "{948BF069-B04B-4E08-B206-AF215ACD8719}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A1DA6E32-7C2C-4296-8177-298EAD4342AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1DA6E32-7C2C-4296-8177-298EAD4342AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1DA6E32-7C2C-4296-8177-298EAD4342AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F542B467-C1A5-421B-BA9F-38B5421C23FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F542B467-C1A5-421B-BA9F-38B5421C23FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F542B467-C1A5-421B-BA9F-38B5421C23FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F542B467-C1A5-421B-BA9F-38B5421C23FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{948BF069-B04B-4E08-B206-AF215ACD8719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{948BF069-B04B-4E08-B206-AF215ACD8719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{948BF069-B04B-4E08-B206-AF215ACD8719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{948BF069-B04B-4E08-B206-AF215ACD8719}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
